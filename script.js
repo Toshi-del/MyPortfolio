@@ -59,7 +59,7 @@ sections.forEach(s => observer.observe(s));
 
 /* ── SCROLL FADE-IN ANIMATIONS ── */
 const fadeEls = document.querySelectorAll(
-  '.skill-card, .acard, .highlight-item, .feature-item, .exp-detail-card, .contact-form, .profile-card'
+  '.skill-card, .acard, .highlight-item, .feature-item, .exp-detail-card, .cert-card, .profile-card'
 );
 fadeEls.forEach(el => el.classList.add('fade-up'));
 
@@ -73,28 +73,6 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 fadeEls.forEach(el => fadeObserver.observe(el));
-
-/* ── CONTACT FORM ── */
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = contactForm.querySelector('button[type="submit"]');
-  const original = btn.innerHTML;
-  btn.innerHTML = `
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-      <polyline points="20 6 9 17 4 12"/>
-    </svg>
-    Message Sent!
-  `;
-  btn.style.background = 'linear-gradient(135deg, #00b894, #00d4aa)';
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.innerHTML = original;
-    btn.style.background = '';
-    btn.disabled = false;
-    contactForm.reset();
-  }, 3000);
-});
 
 /* ── SMOOTH SCROLL OFFSET FOR FIXED NAVBAR ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
