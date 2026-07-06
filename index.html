@@ -340,7 +340,7 @@
             <p class="section-desc">Industry-recognized certifications that validate my networking, security, and IT skills.</p>
           </div>
           <div class="certs-grid">
-            <div class="cert-card cert-featured">
+            <div class="cert-card cert-featured" data-cert="Network Security.png">
               <div class="cert-badge">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
               </div>
@@ -349,8 +349,9 @@
                 <h3>Network Security</h3>
                 <p>Advanced network security principles and best practices for securing enterprise IT infrastructure.</p>
               </div>
+              <span class="cert-view-hint">Click to view</span>
             </div>
-            <div class="cert-card">
+            <div class="cert-card" data-cert="IT Essentials.png">
               <div class="cert-badge">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
               </div>
@@ -359,8 +360,9 @@
                 <h3>IT Essentials</h3>
                 <p>Core IT skills covering hardware, software, networking fundamentals, and IT support essentials.</p>
               </div>
+              <span class="cert-view-hint">Click to view</span>
             </div>
-            <div class="cert-card cert-featured">
+            <div class="cert-card cert-featured" data-cert="CCNA Enterprise Networking, Security, and Automation.png">
               <div class="cert-badge">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/><path d="M12 8v3M12 11l-5.5 5.5M12 11l5.5 5.5"/></svg>
               </div>
@@ -369,8 +371,9 @@
                 <h3>CCNA: Enterprise Networking, Security, and Automation</h3>
                 <p>Enterprise-level networking, WAN technologies, network security, and automation concepts.</p>
               </div>
+              <span class="cert-view-hint">Click to view</span>
             </div>
-            <div class="cert-card">
+            <div class="cert-card" data-cert="Cybersecurity Essentials.png">
               <div class="cert-badge">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
@@ -379,8 +382,9 @@
                 <h3>Cybersecurity Essentials</h3>
                 <p>Foundational cybersecurity knowledge including threat analysis, vulnerabilities, and defense strategies.</p>
               </div>
+              <span class="cert-view-hint">Click to view</span>
             </div>
-            <div class="cert-card">
+            <div class="cert-card" data-cert="CCNAv7 Switching, Routing, and Wireless Essentials.png">
               <div class="cert-badge">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
               </div>
@@ -389,8 +393,9 @@
                 <h3>CCNA: Switching, Routing, and Wireless Essentials</h3>
                 <p>VLANs, inter-VLAN routing, STP, EtherChannel, and wireless LAN configuration using Cisco technologies.</p>
               </div>
+              <span class="cert-view-hint">Click to view</span>
             </div>
-            <div class="cert-card">
+            <div class="cert-card" data-cert="CCNAv7 Introduction to Networks.png">
               <div class="cert-badge">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
@@ -399,6 +404,18 @@
                 <h3>CCNA: Introduction to Networks</h3>
                 <p>Networking fundamentals, IPv4/IPv6 addressing, Ethernet, and the OSI/TCP-IP models using Cisco curricula.</p>
               </div>
+              <span class="cert-view-hint">Click to view</span>
+            </div>
+          </div>
+
+          <!-- Lightbox -->
+          <div class="cert-lightbox" id="certLightbox">
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            <div class="lightbox-content">
+              <button class="lightbox-close" id="lightboxClose">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              </button>
+              <img src="" alt="Certificate" id="lightboxImg" />
             </div>
           </div>
         </div>

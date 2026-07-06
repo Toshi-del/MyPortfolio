@@ -74,6 +74,34 @@ const fadeObserver = new IntersectionObserver((entries) => {
 
 fadeEls.forEach(el => fadeObserver.observe(el));
 
+/* ── CERT LIGHTBOX ── */
+const lightbox = document.getElementById('certLightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+
+document.querySelectorAll('.cert-card[data-cert]').forEach(card => {
+  card.addEventListener('click', () => {
+    const file = card.getAttribute('data-cert');
+    lightboxImg.src = file;
+    lightboxImg.alt = file.replace('.png', '');
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+  setTimeout(() => { lightboxImg.src = ''; }, 300);
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxBackdrop.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
 /* ── SMOOTH SCROLL OFFSET FOR FIXED NAVBAR ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
